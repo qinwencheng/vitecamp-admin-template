@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "lokalise.i18n-ally",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "EditorConfig.EditorConfig",
+    "csstools.postcss",
+    "antfu.iconify",
+    "antfu.unocss",
+    "antfu.goto-alias",
+    "vue.volar",
+  ]
+}
