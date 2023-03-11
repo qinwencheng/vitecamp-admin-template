@@ -1,0 +1,54 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "esnext",
+    "target": "esnext",
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "strict": true,
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "useDefineForClassFields": true,
+    "types": [
+      "@intlify/vite-plugin-vue-i18n/client",
+      "vite/client",
+      "vite-plugin-pages/client",
+      "unplugin-vue-macros/macros-global",
+      "element-plus/global",
+      "vite-plugin-vue-component-preview/client"
+    ],
+    // baseUrl来告诉编译器到哪里去查找模块，所有非相对模块导入都会被当做相对于 baseUrl。
+    // 非相对模块导入的路径映射配置
+    "paths": {
+      "~/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
+  ],
+  "vueCompilerOptions": {
+    "plugins": [
+      "@vue-macros/volar/define-model",
+      "@vue-macros/volar/define-slots"
+    ]
+  },
+  "exclude": [
+    "dist",
+    "node_modules",
+    "cypress"
+  ]
+}
