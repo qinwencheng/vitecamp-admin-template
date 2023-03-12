@@ -13,7 +13,6 @@ import {
 } from 'unplugin-vue-components/resolvers'
 import Markdown from 'vite-plugin-vue-markdown'
 import Prism from 'markdown-it-prism'
-// import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Inspect from 'vite-plugin-inspect'
 import Inspector from 'vite-plugin-vue-inspector'
 import LinkAttributes from 'markdown-it-link-attributes'
@@ -41,7 +40,6 @@ export default (env: ConfigEnv) => {
       imports: [
         'vue',
         'vue-router',
-        'vue-i18n',
         'vue/macros',
         '@vueuse/core',
         '@vueuse/head',
@@ -74,10 +72,6 @@ export default (env: ConfigEnv) => {
       compiler: 'vue3',
       autoInstall: true,
     }),
-
-    // VueI18n({
-    //   include: [resolve(__dirname, '../locales/**')],
-    // }),
 
     // https://github.com/antfu/vite-plugin-inspect
     // Visit http://localhost:3333/__inspect/ to see the inspector

@@ -9,22 +9,9 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    ElAside: typeof import('element-plus/es')['ElAside']
     ElButton: typeof import('element-plus/es')['ElButton']
-    ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
-    ElContainer: typeof import('element-plus/es')['ElContainer']
-    ElIcon: typeof import('element-plus/es')['ElIcon']
-    ElMain: typeof import('element-plus/es')['ElMain']
-    ElMenu: typeof import('element-plus/es')['ElMenu']
-    ElMenuItem: typeof import('element-plus/es')['ElMenuItem']
-    ElMenuItemGroup: typeof import('element-plus/es')['ElMenuItemGroup']
-    ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
     ElTag: typeof import('element-plus/es')['ElTag']
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
-    EnProcess: typeof import('./components/EnProcess.md')['default']
-    IAkarIconsGithubFill: typeof import('~icons/akar-icons/github-fill')['default']
-    ILaLanguage: typeof import('~icons/la/language')['default']
-    IMdiContentDuplicate: typeof import('~icons/mdi/content-duplicate')['default']
     IMdiHomeSearchOutline: typeof import('~icons/mdi/home-search-outline')['default']
     IPhCloudMoonBold: typeof import('~icons/ph/cloud-moon-bold')['default']
     IPhSunHorizonBold: typeof import('~icons/ph/sun-horizon-bold')['default']
