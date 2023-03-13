@@ -1,21 +1,7 @@
 <script lang="ts" setup>
+import SideMenuPlayground from './SideMenuPlayground/index.vue'
 </script>
 
 <template>
-  <div>
-    hello
-  </div>
-  <div>
-    <el-button type="primary">
-      button
-    </el-button>
-  </div>
-  <div>
-    <el-tag type="success">
-      button
-    </el-tag>
-  </div>
+  <SideMenuPlayground />
 </template>
-
-<style>
-</style>
