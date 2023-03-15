@@ -14,5 +14,10 @@
   },
   "emmet.includeLanguages": {
     "postcss": "css"
-  }
+  },
+  "conventionalCommits.autoCommit": false,
+  "conventionalCommits.scopes": [
+    "todo",
+  ],
+  "conventionalCommits.lineBreak": "\\\\n"
 }

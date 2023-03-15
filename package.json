@@ -1,7 +1,6 @@
 {
   "name": "vitecamp-admin-template",
   "packageManager": "pnpm@7.12.0",
-  "type": "module",
   "version": "0.0.0",
   "author": "qinwencheng",
   "license": "MIT",
@@ -77,6 +76,7 @@
     ]
   },
   "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
+    "pre-commit": "pnpm lint-staged",
+    "commit-msg": "npx commitlint -e $1"
   }
 }
