@@ -28,9 +28,9 @@ export default (env: ConfigEnv) => {
         vue: vue({
           include: [/\.vue$/, /\.md$/],
         }),
+        vueJsx: vueJsx(),
       },
     }),
-    vueJsx(),
     // https://github.com/hannoeru/vite-plugin-pages
     Pages({
       extensions: ['vue', 'md'],
@@ -51,12 +51,12 @@ export default (env: ConfigEnv) => {
         'src/composables',
       ],
       vueTemplate: true,
-      // resolvers: [ElementPlusResolver()],
+      resolvers: [ElementPlusResolver()],
     }),
     Components({
       dts: 'src/components.d.ts',
-      extensions: ['vue', 'md'],
-      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      extensions: ['vue', 'md', 'jsx', 'tsx'],
+      include: [/\.vue$/, /\.vue\?vue/, /\.vue\?v=/, /\.[jt]sx$/, /\.md$/],
       // imports 指定组件所在位置，默认为 src/components; 有需要也可以加上 view 目录
       resolvers: [
         ElementPlusResolver({
