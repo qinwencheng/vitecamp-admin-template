@@ -35,6 +35,8 @@
     "@types/node": "^18.15.0",
     "@types/nprogress": "^0.2.0",
     "vitest": "^0.29.2",
+    "@testing-library/vue": "^7.0.0",
+    "@vue/test-utils": "^2.3.1",
     "jsdom": "^21.1.0",
     "cypress": "^12.7.0",
     "lint-staged": "^13.2.0",

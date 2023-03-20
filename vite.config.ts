@@ -21,10 +21,18 @@ export default defineConfig((env) => {
     },
     // https://github.com/vitest-dev/vitest
     test: {
-      include: ['test/**/*.test.ts'],
+      globals: true,
+      include: [
+        'test/**/*.test.ts',
+        'src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}',
+      ],
       environment: 'jsdom',
       deps: {
-        inline: ['@vue', '@vueuse', 'vue-demi'],
+        inline: ['@vue', '@vueuse', 'vue-demi', 'element-plus'],
+      },
+      // 为了支持tsx的测试
+      transformMode: {
+        web: [/\.[jt]sx$/],
       },
     },
     // 服务设置
