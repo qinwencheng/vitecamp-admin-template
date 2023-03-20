@@ -2,21 +2,25 @@
 import type { RouteRecordRaw } from 'vue-router'
 import MenuItem from '~/components/SideMenu/MenuItem'
 
-const sideMenuProps = defineProps({
+const props = defineProps({
   itemList: {
     type: Object as PropType<RouteRecordRaw[]>,
     required: true,
   },
 })
 
-// 为了少定义一次props
 const MenuContent = defineComponent({
-  setup() {
+  props: {
+    itemList: {
+      type: Object as PropType<RouteRecordRaw[]>,
+      required: true,
+    },
+  },
+  setup(props) {
     return () => (
       <>
         {
-          /* 使用外部组件的props */
-          sideMenuProps.itemList?.map(x => (<MenuItem item={x} />))
+          props.itemList?.map(x => (<MenuItem item={x} />))
         }
       </>
     )
@@ -26,7 +30,7 @@ const MenuContent = defineComponent({
 
 <template>
   <el-menu id="side-menu" default-active="2" class="h-full" unique-opened router>
-    <MenuContent :item-list="sideMenuProps.itemList" />
+    <MenuContent :item-list="props.itemList" />
   </el-menu>
 </template>
 
