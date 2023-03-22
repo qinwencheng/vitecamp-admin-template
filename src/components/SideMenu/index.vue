@@ -40,7 +40,7 @@ const MenuContent = defineComponent({
 #side-menu .el-sub-menu__title {
   border-radius: 3px;
   height: 42px;
-  margin-top: 6px;
+  margin-bottom: 6px;
 }
 
 /* 默认情况下菜单项的hover的样式 */
