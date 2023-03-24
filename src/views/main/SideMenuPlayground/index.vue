@@ -8,15 +8,23 @@ const handleOpen = (key: string, keyPath: string[]) => {
 const handleClose = (key: string, keyPath: string[]) => {
   // console.log(key, keyPath)
 }
+const isCollapse = ref(true)
+const sideWidth = computed(() => {
+  return isCollapse.value ? 'w-64px' : 'w-200px'
+})
+const open = useToggle(isCollapse)
 </script>
 
 <template>
-  <div class="side-menu-playground-page-container h-[calc(100vh-30px)] w-screen">
+  <el-button @click="open()">
+    open
+  </el-button>
+  <div class="side-menu-playground-page-container h-[calc(100vh-30px)] w-screen bg-[#f5f6fb]">
     <transition name="fade-slide" mode="out-in" appear>
       <el-container class="h-full w-full">
-        <el-aside width="200px">
-          <SideMenu :item-list="mainRouter" />
-        </el-aside>
+        <div>
+          <SideMenu :item-list="mainRouter" :collapse="isCollapse" :class="sideWidth" />
+        </div>
         <el-main>
           <section class="h-full w-full bg-[#f5f6fb]">
             <div class="main w-full h-full bg-red">
