@@ -36,7 +36,7 @@ const MenuContent = defineComponent({
 
 <style lang="scss">
 #side-menu {
-
+  // 菜单的样式(展开状态)
   &.el-menu.el-menu--vertical:not(.el-menu--collapse) {
     // 默认情况下菜单项的样式
     .el-menu-item,
@@ -71,6 +71,51 @@ const MenuContent = defineComponent({
     }
   }
 
+  // 菜单的样式(收缩为只有图标时状态)
+  &.el-menu.el-menu--vertical.el-menu--collapse {
+
+    .el-menu-item,
+    .el-sub-menu__title {
+      margin-bottom: 6px;
+      height: 42px;
+
+      &::before {
+        left: 8px;
+        right: 8px;
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        pointer-events: none;
+        border-radius: 3px;
+        transition: background-color .3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      &:hover::before,
+      &.is-active::before {
+        border: none;
+        background-color: #f3f3f5;
+      }
+      // 当鼠标放到某个菜单项上时的样式
+      &:hover,
+      &.is-active {
+        background-color: #0000;
+      }
+    }
+  }
+
+}
+
+.el-menu--vertical.el-menu--popup-container {
+  ul {
+    padding: 4px 0;
+    min-width: 150px;
+    li.el-menu-item,
+    li.el-sub-menu,
+    li .el-sub-menu__title {
+      height: 40px;
+    }
+  }
 }
 
 /* 某个被选中激活的菜单项的样式 */
