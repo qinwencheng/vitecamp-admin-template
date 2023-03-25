@@ -106,6 +106,7 @@ const MenuContent = defineComponent({
 
 }
 
+// 收缩侧边栏时的二级菜单弹出框
 .el-menu--vertical.el-menu--popup-container {
   ul {
     padding: 4px 0;
@@ -114,6 +115,9 @@ const MenuContent = defineComponent({
     li.el-sub-menu,
     li .el-sub-menu__title {
       height: 40px;
+      &:hover {
+        background-color: #f3f3f5;
+      }
     }
   }
 }
