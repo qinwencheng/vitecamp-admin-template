@@ -36,8 +36,15 @@ const MenuContent = defineComponent({
 
 <style lang="scss">
 #side-menu {
+
+  // 去除右边框
+  &.el-menu {
+    border-right: 0;
+  }
+
   // 菜单的样式(展开状态)
   &.el-menu.el-menu--vertical:not(.el-menu--collapse) {
+
     // 默认情况下菜单项的样式
     .el-menu-item,
     .el-sub-menu__title {
@@ -96,6 +103,7 @@ const MenuContent = defineComponent({
         border: none;
         background-color: #f3f3f5;
       }
+
       // 当鼠标放到某个菜单项上时的样式
       &:hover,
       &.is-active {
@@ -111,10 +119,12 @@ const MenuContent = defineComponent({
   ul {
     padding: 4px 0;
     min-width: 150px;
+
     li.el-menu-item,
     li.el-sub-menu,
     li .el-sub-menu__title {
       height: 40px;
+
       &:hover {
         background-color: #f3f3f5;
       }
