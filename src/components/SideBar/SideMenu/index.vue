@@ -1,36 +1,17 @@
 <script setup lang='tsx'>
 import type { RouteRecordRaw } from 'vue-router'
-import MenuItem from '~/components/SideMenu/MenuItem'
 
-const props = defineProps({
+defineProps({
   itemList: {
     type: Object as PropType<RouteRecordRaw[]>,
     required: true,
-  },
-})
-
-const MenuContent = defineComponent({
-  props: {
-    itemList: {
-      type: Object as PropType<RouteRecordRaw[]>,
-      required: true,
-    },
-  },
-  setup(props) {
-    return () => (
-      <>
-        {
-          props.itemList?.map(x => (<MenuItem item={x} />))
-        }
-      </>
-    )
   },
 })
 </script>
 
 <template>
   <el-menu id="side-menu" default-active="2" class="h-full" unique-opened router :collapse-transition="false">
-    <MenuContent :item-list="props.itemList" />
+    <MenuContent :item-list="itemList" />
   </el-menu>
 </template>
 
