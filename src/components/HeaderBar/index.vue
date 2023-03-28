@@ -13,6 +13,7 @@ const appStore = useAppStore()
         <div v-if="appStore.isSideMenuCollapsed" class="i-mdi-format-indent-increase" />
         <div v-else class="i-mdi-format-indent-decrease" />
       </el-icon>
+      <Breadcrumb class="ml-4" />
     </div>
   </div>
 </template>
