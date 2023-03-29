@@ -13,7 +13,8 @@ const appStore = useAppStore()
         <div v-if="appStore.isSideMenuCollapsed" class="i-mdi-format-indent-increase" />
         <div v-else class="i-mdi-format-indent-decrease" />
       </el-icon>
-      <Breadcrumb class="ml-4" />
+      <!-- 大于sm尺寸时display为block，否则为none -->
+      <Breadcrumb class="ml-4 hidden sm:block" />
     </div>
   </div>
 </template>
