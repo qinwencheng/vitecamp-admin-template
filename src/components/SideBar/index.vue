@@ -12,5 +12,7 @@ const attrs = useAttrs() as AttrsType
 
 <template>
   <SideLogo />
-  <SideMenu v-bind="attrs" />
+  <el-scrollbar class="h-full overflow-auto">
+    <SideMenu v-bind="attrs" />
+  </el-scrollbar>
 </template>
