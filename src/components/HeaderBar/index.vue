@@ -1,20 +1,23 @@
 import { useAppStore } from '~/store/modules';
 
-<script setup lang="ts">
-import { useAppStore } from '~/store/modules'
-
-const appStore = useAppStore()
-</script>
-
 <template>
-  <div class="header-bar bg-white w-full h-full border-b border-[#eee] flex px-15px">
+  <div class="header-bar icon-header bg-white w-full h-full border-b border-[#eee] flex px-15px">
     <div class="left-tool flex items-center">
-      <el-icon size="20" @click="appStore.toggleSideMenuCollapse()">
-        <div v-if="appStore.isSideMenuCollapsed" class="i-mdi-format-indent-increase" />
-        <div v-else class="i-mdi-format-indent-decrease" />
-      </el-icon>
+      <MenuCollapse />
       <!-- 大于sm尺寸时display为block，否则为none -->
       <Breadcrumb class="ml-4 hidden sm:block" />
     </div>
+
+    <div class="right-tool ml-auto flex items-center ">
+      <DarkMode />
+      <GithubSite />
+      <Fullscreen />
+    </div>
   </div>
 </template>
+
+<style lang="scss">
+.icon-header {
+  font-size: 1.3em;
+}
+</style>
