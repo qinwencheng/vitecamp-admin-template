@@ -16,7 +16,7 @@ function handleBreadClick(path: string) {
       @click="handleBreadClick(item.path)"
     >
       <div class="flex items-center ">
-        <div :class="item.meta.icon" class="mr-1 text-[18px]" />
+        <div :class="item.meta.icon" class="mr-1 text-[15px]" />
         <div>
           {{ item.meta.title }}
         </div>
