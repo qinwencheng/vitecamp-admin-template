@@ -1,5 +1,6 @@
 import type { RouteRecordRaw } from 'vue-router'
 
+// @unocss-include
 export const mainRouter: Array<RouteRecordRaw> = [
   {
     path: '/dashboard',
