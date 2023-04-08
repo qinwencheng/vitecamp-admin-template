@@ -2,6 +2,7 @@
 import { useTagsStore } from '~/store/modules'
 
 const route = useRoute()
+const router = useRouter()
 const tagsStore = useTagsStore()
 watch(
   route,
@@ -14,11 +15,15 @@ watch(
   },
   { immediate: true },
 )
+
+const handleClose = (path: string) => {
+  tagsStore.deleteTag(path)
+}
 </script>
 
 <template>
   <div class="[&_.el-tag]:( h-7 mx-10px text-size-[var(--el-font-size-base)])">
-    <el-tag v-for="item in tagsStore.tagsList" :key="item.path" class="inline-block" closable>
+    <el-tag v-for="item in tagsStore.tagsList" :key="item.path" class="inline-block" closable @close="handleClose(item.path)">
       {{ item.title }}
     </el-tag>
   </div>
