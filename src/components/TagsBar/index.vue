@@ -19,11 +19,15 @@ watch(
 const handleClose = (path: string) => {
   tagsStore.deleteTag(path)
 }
+
+const handleTagClick = (path: string) => {
+  router.push(path)
+}
 </script>
 
 <template>
   <div class="[&_.el-tag]:( h-7 mx-10px text-size-[var(--el-font-size-base)])">
-    <el-tag v-for="item in tagsStore.tagsList" :key="item.path" class="inline-block" closable @close="handleClose(item.path)">
+    <el-tag v-for="item in tagsStore.tagsList" :key="item.path" class="inline-block" closable @close="handleClose(item.path)" @click="handleTagClick(item.path)">
       {{ item.title }}
     </el-tag>
   </div>
