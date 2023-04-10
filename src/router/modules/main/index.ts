@@ -75,8 +75,8 @@ export const mainRouter: Array<RouteRecordRaw> = [
         component: () => import('~/views/main/workbench.vue'),
       },
       {
-        path: '/sample1-2',
-        name: 'sample1-2',
+        path: '/sample1-3',
+        name: 'sample1-3',
         meta: {
           title: '富文本编辑器',
           icon: 'i-ic-sharp-text-rotation-none',

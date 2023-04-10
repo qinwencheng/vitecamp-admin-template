@@ -11,6 +11,7 @@ const asyncRoutes: Array<RouteRecordRaw> = [
       icon: '',
     },
     component: () => import('~/views/main/index.vue'),
+    redirect: '/dashboard',
     children: mainRouter,
   },
   {
