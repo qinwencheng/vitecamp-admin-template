@@ -53,8 +53,8 @@ defineProps({
       }
 
       // 当鼠标放到某个菜单项上时的样式
-      &:hover {
-        background-color: #f3f3f5;
+      &:hover:not(.is-active) {
+        background-color: var(--menu-item-color-hover);
       }
     }
   }
@@ -82,7 +82,7 @@ defineProps({
       &:hover::before,
       &.is-active::before {
         border: none;
-        background-color: #f3f3f5;
+        background-color: var(--menu-item-color-hover);
       }
 
       // 当鼠标放到某个菜单项上时的样式
@@ -107,14 +107,14 @@ defineProps({
       height: 40px;
 
       &:hover {
-        background-color: #f3f3f5;
+        background-color: var(--menu-item-color-hover);
       }
     }
   }
 }
 
 /* 某个被选中激活的菜单项的样式 */
-#side-menu .el-menu-item.is-active {
+#side-menu .el-menu-item.is-active{
   background-color: var(--el-color-primary-light-9);
 }
 

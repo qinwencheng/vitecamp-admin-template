@@ -1,5 +1,14 @@
 @import 'element-plus/theme-chalk/dark/css-vars.css';
 
+html {
+  --menu-item-color-hover: #f2f3f5;
+}
+
+html.dark {
+  --menu-item-color-hover: #2d2d30;
+}
+
 body {
   @apply dark:bg-gray-800 dark:text-gray-200;
 }
+
