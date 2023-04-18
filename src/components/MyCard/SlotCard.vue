@@ -1,16 +1,20 @@
 <template>
-  <div class="my-card box-border rounded-3px bg-#fff  leading-relaxed break-words text-14px children:(px-4 py-3)">
-    <div class="header text-4 flex items-center justify-between">
-      <div class="card-header__main" role="heading">
+  <div v-if="$slots['header-main'] || $slots['header-extra']" class="my-card box-border rounded-3px bg-#fff  leading-relaxed break-words text-14px children:(px-4 py-3)">
+    <div class="header text-4 flex items-center justify-between b-b">
+      <div v-if="$slots['header-main']" class="card-header__main w-full" role="heading">
         <slot name="header-main" />
       </div>
-      <div class="card-header__extra">
+      <div v-if="$slots['header-extra']" class="card-header__extra">
         <slot name="header-extra" />
       </div>
     </div>
 
-    <slot name="main" class="main pt-0 b-t" />
+    <div class="main main pt-0">
+      <slot />
+    </div>
 
-    <slot class="footer b-t" name="footer" />
+    <div v-if="$slots.footer" class="b-t">
+      <slot class="footer" name="footer" />
+    </div>
   </div>
 </template>
