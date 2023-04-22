@@ -27,7 +27,7 @@ const handleTagClick = (path: string) => {
 
 <template>
   <div class="[&_.el-tag]:( h-7 mx-10px text-size-[var(--el-font-size-base)] cursor-pointer)">
-    <el-tag v-for="item in tagsStore.tagsList" :key="item.path" class="inline-block" closable @close="handleClose(item.path)" @click="handleTagClick(item.path)">
+    <el-tag v-for="item in tagsStore.tagsList" :key="item.path" :type="item.path === route.path ? '' : 'info'" class="inline-block" closable @close="handleClose(item.path)" @click="handleTagClick(item.path)">
       {{ item.title }}
     </el-tag>
   </div>
