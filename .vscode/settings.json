@@ -18,6 +18,11 @@
   "conventionalCommits.autoCommit": false,
   "conventionalCommits.scopes": [
     "todo",
+    "route",
+    "components",
+    "test",
+    "store",
+    "styles"
   ],
   "conventionalCommits.lineBreak": "\\\\n"
 }
