@@ -2,10 +2,12 @@
 
 html {
   --menu-item-color-hover: #f2f3f5;
+  --border-color: rgb(239, 239, 245);
 }
 
 html.dark {
   --menu-item-color-hover: #2d2d30;
+  --border-color: rgba(255, 255, 255, 0.09);
 }
 
 body {
