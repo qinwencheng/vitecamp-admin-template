@@ -1,16 +1,24 @@
 <script setup lang="ts">
-const props = defineProps<{
+interface Props {
   bordered?: boolean
   title?: string
-}>()
+  shadow: 'always' | 'hover' | 'never' | boolean
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  shadow: 'never',
+})
 </script>
 
 <template>
   <div
     class="my-card box-border rounded-3px bg-#fff dark:bg-#18181c leading-relaxed break-words text-14px children:(px-4 py-3)"
-    :class="{ 'b-1px b-solid b-[var(--border-color)]': props.bordered }"
+    :class="{ 'b-1px b-solid b-[var(--border-color)]': props.bordered, 'hover:shadow-[var(--box-shadow)]': props.shadow === 'hover', 'shadow-[var(--box-shadow)]': ['always', true].includes(props.shadow) }"
   >
-    <div v-if="props.title || $slots['header-main'] || $slots['header-extra']" class="header text-4 flex items-center justify-between b-b border-[var(--el-border-color)]">
+    <div
+      v-if="props.title || $slots['header-main'] || $slots['header-extra']"
+      class="header text-4 flex items-center justify-between b-b border-[var(--el-border-color)]"
+    >
       <!-- header-main or props.title -->
       <div v-if="$slots['header-main']" class="card-header__main w-full" role="heading">
         <slot name="header-main" />
