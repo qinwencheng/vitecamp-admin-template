@@ -16,12 +16,12 @@ const props = withDefaults(defineProps<Props>(), {
     :class="{ 'b-1px b-solid b-[var(--border-color)]': props.bordered, 'hover:shadow-[var(--box-shadow)]': props.shadow === 'hover', 'shadow-[var(--box-shadow)]': ['always', true].includes(props.shadow) }"
   >
     <div
-      v-if="props.title || $slots['header-main'] || $slots['header-extra']"
+      v-if="props.title || $slots.header || $slots['header-extra']"
       class="header text-4 flex items-center justify-between b-b border-[var(--el-border-color)]"
     >
-      <!-- header-main or props.title -->
-      <div v-if="$slots['header-main']" class="card-header__main w-full" role="heading">
-        <slot name="header-main" />
+      <!-- header or props.title -->
+      <div v-if="$slots.header" class="card-header__main w-full" role="heading">
+        <slot name="header" />
       </div>
       <div v-else-if="props.title" class="card-header__main w-full" role="heading">
         {{ props.title }}
