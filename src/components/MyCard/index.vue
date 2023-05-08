@@ -17,7 +17,8 @@ const props = withDefaults(defineProps<Props>(), {
   >
     <div
       v-if="props.title || $slots.header || $slots['header-extra']"
-      class="header text-4 flex items-center justify-between b-b border-[var(--el-border-color)]"
+      class="header text-4 flex items-center justify-between"
+      :class="{ 'b-b border-[var(--el-border-color)]': props.bordered }"
     >
       <!-- header or props.title -->
       <div v-if="$slots.header" class="card-header__main w-full" role="heading">
@@ -36,7 +37,7 @@ const props = withDefaults(defineProps<Props>(), {
       <slot />
     </div>
 
-    <div v-if="$slots.footer" class="b-t border-[var(--el-border-color)]">
+    <div v-if="$slots.footer" :class="{ 'b-t border-[var(--el-border-color)]': props.bordered }">
       <slot class="footer" name="footer" />
     </div>
   </div>
