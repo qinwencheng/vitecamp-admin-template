@@ -9,7 +9,27 @@ export const mainRouter: Array<RouteRecordRaw> = [
       title: 'dashboard',
       icon: 'i-mdi-home',
     },
-    component: () => import('~/views/main/workbench.vue'),
+    children: [
+      {
+        path: '/workbench',
+        name: 'workbench',
+        meta: {
+          title: '工作台',
+          icon: 'i-icon-park-outline-workbench',
+        },
+        component: () => import('~/views/main/Workbench/index.vue'),
+      },
+      {
+        path: '/monitor',
+        name: 'monitor',
+        meta: {
+          title: '监控页',
+          icon: 'i-uil-monitor-heart-rate',
+        },
+        component: () => import('~/views/main/MonitorPage/index.vue'),
+      },
+    ],
+    redirect: '/workbench',
   },
   {
     path: '/base',
@@ -26,7 +46,7 @@ export const mainRouter: Array<RouteRecordRaw> = [
           title: '基础组件',
           icon: 'i-material-symbols-auto-awesome-outline-rounded',
         },
-        component: () => import('~/views/main/workbench.vue'),
+        component: () => import('~/views/main/temp.vue'),
       },
       {
         path: '/base1-2',
@@ -35,7 +55,7 @@ export const mainRouter: Array<RouteRecordRaw> = [
           title: 'Unocss',
           icon: 'i-material-symbols-auto-awesome-outline-rounded',
         },
-        component: () => import('~/views/main/workbench.vue'),
+        component: () => import('~/views/main/temp.vue'),
       },
       {
         path: '/base1-3',
@@ -44,7 +64,7 @@ export const mainRouter: Array<RouteRecordRaw> = [
           title: 'KeepAlive',
           icon: 'i-material-symbols-auto-awesome-outline-rounded',
         },
-        component: () => import('~/views/main/workbench.vue'),
+        component: () => import('~/views/main/temp.vue'),
       },
     ],
   },
@@ -63,7 +83,7 @@ export const mainRouter: Array<RouteRecordRaw> = [
           title: 'CRUD表格',
           icon: 'i-ic-baseline-table-view',
         },
-        component: () => import('~/views/main/workbench.vue'),
+        component: () => import('~/views/main/temp.vue'),
       },
       {
         path: '/sample1-2',
@@ -72,7 +92,7 @@ export const mainRouter: Array<RouteRecordRaw> = [
           title: 'MD编辑器',
           icon: 'i-ri-markdown-line',
         },
-        component: () => import('~/views/main/workbench.vue'),
+        component: () => import('~/views/main/temp.vue'),
       },
       {
         path: '/sample1-3',
@@ -81,7 +101,7 @@ export const mainRouter: Array<RouteRecordRaw> = [
           title: '富文本编辑器',
           icon: 'i-ic-sharp-text-rotation-none',
         },
-        component: () => import('~/views/main/workbench.vue'),
+        component: () => import('~/views/main/temp.vue'),
       },
     ],
   },
@@ -92,7 +112,7 @@ export const mainRouter: Array<RouteRecordRaw> = [
       title: '外部链接',
       icon: 'i-mdi-link-variant',
     },
-    component: () => import('~/views/main/workbench.vue'),
+    component: () => import('~/views/main/temp.vue'),
     children: [
       {
         path: '/link1-1',
@@ -112,7 +132,7 @@ export const mainRouter: Array<RouteRecordRaw> = [
       title: '多级菜单',
       icon: 'i-ic-baseline-menu',
     },
-    component: () => import('~/views/main/workbench.vue'),
+    component: () => import('~/views/main/temp.vue'),
     children: [
       {
         path: '/menu1-1',
