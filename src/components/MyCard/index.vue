@@ -33,7 +33,7 @@ const props = withDefaults(defineProps<Props>(), {
       </div>
     </div>
 
-    <div class="main main pt-0">
+    <div class="main">
       <slot />
     </div>
 
