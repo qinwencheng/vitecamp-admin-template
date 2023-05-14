@@ -164,4 +164,94 @@
       </template>
     </MyCard>
   </div>
+
+  <div class="menu-container mt-3" grid="~ gap-x-3 gap-y-2 sm:cols-4 lg:cols-3 xl:cols-8">
+    <MyCard>
+      <div class="py-2">
+        <div class="flex justify-center">
+          <div class="i-mdi-user-supervisor text-32px text-#8fd0ff" />
+        </div>
+        <div class="menu-text flex justify-center">
+          <span>用户</span>
+        </div>
+      </div>
+    </MyCard>
+
+    <MyCard>
+      <div class="py-2">
+        <div class="flex justify-center">
+          <div class="i-carbon-text-link-analysis text-32px text-#8fd0ff" />
+        </div>
+        <div class="menu-text flex justify-center">
+          <span>分析</span>
+        </div>
+      </div>
+    </MyCard>
+
+    <MyCard>
+      <div class="py-2">
+        <div class="flex justify-center">
+          <div class="i-ic-outline-shopping-cart text-32px text-#ff9c6e" />
+        </div>
+        <div class="menu-text flex justify-center">
+          <span>商品</span>
+        </div>
+      </div>
+    </MyCard>
+
+    <MyCard>
+      <div class="py-2">
+        <div class="flex justify-center">
+          <div class="i-ant-design-account-book-outlined text-32px text-#b37feb" />
+        </div>
+        <div class="menu-text flex justify-center">
+          <span>订单</span>
+        </div>
+      </div>
+    </MyCard>
+
+    <MyCard>
+      <div class="py-2">
+        <div class="flex justify-center">
+          <div class="i-ant-design-credit-card-outlined text-32px text-#ffd666" />
+        </div>
+        <div class="menu-text flex justify-center">
+          <span>票据</span>
+        </div>
+      </div>
+    </MyCard>
+
+    <MyCard>
+      <div class="py-2">
+        <div class="flex justify-center">
+          <div class="i-ant-design-mail-outlined text-32px text-#5cdbd3" />
+        </div>
+        <div class="menu-text flex justify-center">
+          <span>消息</span>
+        </div>
+      </div>
+    </MyCard>
+
+    <MyCard>
+      <div class="py-2">
+        <div class="flex justify-center">
+          <div class="i-ant-design-tags-outlined text-32px text-#ff85c0" />
+        </div>
+        <div class="menu-text flex justify-center">
+          <span>标签</span>
+        </div>
+      </div>
+    </MyCard>
+
+    <MyCard>
+      <div class="py-2">
+        <div class="flex justify-center">
+          <div class="i-ep-setting text-32px text-#ffc069" />
+        </div>
+        <div class="menu-text flex justify-center">
+          <span>配置</span>
+        </div>
+      </div>
+    </MyCard>
+  </div>
 </template>
