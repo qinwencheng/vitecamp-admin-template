@@ -1,6 +1,6 @@
 <template>
   <span>MonitorPage</span>
-  <div class="card-container" grid="~ gap-x-3 gap-y-2 cols-3">
+  <div class="card-container" grid="~ gap-x-3 gap-y-2 sm:cols-2 lg:cols-3 xl:cols-4">
     <MyCard bordered>
       <template #header>
         <div class="card-header__main" role="heading">
@@ -65,7 +65,7 @@
 
       <div class="px-1 py-1 flex">
         <div class="flex-1">
-          <el-progress :text-inside="true" :stroke-width="16" :percentage="79" />
+          <el-progress :text-inside="true" :stroke-width="16" :percentage="79" striped striped-flow />
         </div>
       </div>
       <template #footer>
@@ -165,13 +165,3 @@
     </MyCard>
   </div>
 </template>
-
-<!--
-
-  feat(components): :sparkles: 新增数据卡片容器
-
-- 640px起，一行排列两个
-- 1024px起，一行排列三个
-- 1280px起，一行排列四个
-
- -->
