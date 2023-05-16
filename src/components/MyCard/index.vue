@@ -2,7 +2,7 @@
 interface Props {
   bordered?: boolean
   title?: string
-  shadow: boolean | 'always' | 'hover' | 'never'
+  shadow?: boolean | 'always' | 'hover' | 'never'
 }
 
 const props = withDefaults(defineProps<Props>(), {
