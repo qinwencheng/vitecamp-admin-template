@@ -11,8 +11,8 @@ const attrs = useAttrs() as AttrsType
 </script>
 
 <template>
-  <SideLogo />
-  <el-scrollbar class="h-full overflow-auto">
+  <SideLogo class="h-60px" />
+  <el-scrollbar class="[&.el-scrollbar]:(h-[calc(100%-60px)])">
     <SideMenu v-bind="attrs" />
   </el-scrollbar>
 </template>

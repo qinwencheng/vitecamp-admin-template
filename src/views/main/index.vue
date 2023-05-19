@@ -14,7 +14,7 @@ const sideWidth = computed(() => {
 </script>
 
 <template>
-  <div class="main-page h-[calc(100vh-30px)] w-screen bg-[#f5f6fb]">
+  <div class="main-page h-100vh w-screen bg-[#f5f6fb]">
     <transition name="fade-slide" mode="out-in" appear>
       <el-container class="h-full w-full">
         <div class="left-panel bg-[#fff] dark:bg-[#18181c] border-r border-solid" :class="sideWidth">
