@@ -5,5 +5,4 @@
   <div>
     <router-view />
   </div>
-  <TheFooter />
 </template>
