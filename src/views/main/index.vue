@@ -38,3 +38,11 @@ const sideWidth = computed(() => {
     </transition>
   </div>
 </template>
+
+<style>
+.left-panel {
+  transition: width .3s cubic-bezier(.4, 0, .2, 1) 0s;
+  color: .3s cubic-bezier(.4, 0, .2, 1);
+  border-color: .3s cubic-bezier(.4, 0, .2, 1);
+}
+</style>
